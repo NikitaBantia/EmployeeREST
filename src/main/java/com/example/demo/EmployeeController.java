@@ -19,6 +19,7 @@ public class EmployeeController {
     @PostMapping("/employees")
     public ResponseEntity<String> addEmployee(@RequestBody @Valid EmployeeRest employee) {
         employeeRepository.save(employee);
+        //Employee added
         return ResponseEntity.status(HttpStatus.CREATED).body("Employee added");
     }
 
